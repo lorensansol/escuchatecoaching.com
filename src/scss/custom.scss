@@ -44,6 +44,10 @@
   font-display: swap;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 // Container
 .container {
   @extend .is-max-desktop;

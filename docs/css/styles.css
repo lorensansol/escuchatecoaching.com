@@ -12287,6 +12287,9 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   font-style: normal;
   font-display: swap; }
 
+html {
+  scroll-behavior: smooth; }
+
 @media (max-width: 768px) {
   .reverse-rows-mobile-only {
     flex-direction: row-reverse; } }

@@ -22,9 +22,9 @@ git add .;git commit -m "Actualización: `date +'%Y-%m-%d %H:%M:%S'`";git push
 - favicon
 - mapa
 - lazyload
-- showup
 - schema
 - analytics
 - search console
 - Firefox y Safary
   - header blur
+  - smothscroll
