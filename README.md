@@ -22,6 +22,7 @@ git add .;git commit -m "Actualización: `date +'%Y-%m-%d %H:%M:%S'`";git push
 - favicon
 - mapa
 - lazyload
+- foto flor en sobre mi order 2 mobile only
 - schema
 - analytics
 - search console
