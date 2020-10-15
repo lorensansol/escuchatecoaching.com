@@ -1,0 +1,29 @@
+- const devMode = false
+block var
+doctype html
+html(lang="es")
+  head
+    block head
+      include head.pug
+  body.content.has-text-centered
+    .shot-top-scroll
+    block menu
+      include menu.pug
+    block header
+      include header.pug
+    main#main(role='main')
+      block content
+        block servicios
+          include ../includes/servicios.pug
+        block que
+          include ../includes/que.pug
+        block sobre
+          include ../includes/sobre.pug
+        block testimonios
+          include ../includes/testimonios.pug
+        block contacto
+          include ../includes/contacto.pug
+    block footer
+      include footer.pug
+    block scripts
+      script(src="/js/scripts.js" defer)

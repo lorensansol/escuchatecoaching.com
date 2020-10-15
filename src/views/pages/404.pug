@@ -1,0 +1,19 @@
+extends ../template/layout.pug
+
+block var
+  - const title= 'Error 404: Página no encontrada'
+
+block menu
+block header
+  header.section
+    .container
+      h1.title.is-primary Error 404
+      p.subtitle ¡Página no encontrada!
+block content
+  section.section
+    .container
+      p La página a la que intentas acceder no está disponible.
+      p
+        | Puedes ir a la 
+        a(href="/") página de inicio
+        |  para navegar por nuestros contenidos.

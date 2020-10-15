@@ -1,0 +1,19 @@
+nav.navbar.is-fixed-top.is-transparent(role='navigation' aria-label='main navigation')
+  .container
+    .navbar-brand
+      a.navbar-item(href='#')
+        .subtitle.is-3
+          | Escucha
+          span.has-text-info te
+      a.navbar-burger.burger(role='button' aria-label='menu' aria-expanded='false' data-target='navbar-menu')
+        span(aria-hidden='true')
+        span(aria-hidden='true')
+        span(aria-hidden='true')
+    #navbar-menu.navbar-menu
+      .navbar-end
+        a.navbar-item.is-tab(href='#servicios') Servicios
+        a.navbar-item.is-tab(href='#que') ¿Qué es?
+        a.navbar-item.is-tab(href='#sobre') Sobre mí
+        a.navbar-item.is-tab(href='#testimonios') Testimonios
+        .navbar-item.is-tab
+          a.button.is-info(href='#contacto') Contacto

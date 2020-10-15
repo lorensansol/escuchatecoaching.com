@@ -1,0 +1,158 @@
+// Fonts
+@font-face {
+  font-family: 'Aileron';
+  src: url('/fonts/aileron-light.eot');
+  src: url('/fonts/aileron-light.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/aileron-light.woff2') format('woff2'),
+       url('/fonts/aileron-light.woff') format('woff'),
+       url('/fonts/aileron-light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Aileron';
+  src: url('/fonts/aileron-bold.eot');
+  src: url('/fonts/aileron-bold.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/aileron-bold.woff2') format('woff2'),
+       url('/fonts/aileron-bold.woff') format('woff'),
+       url('/fonts/aileron-bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Playlist Script';
+  src: url('/fonts/playlist-script.eot');
+  src: url('/fonts/playlist-script.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/playlist-script.woff2') format('woff2'),
+       url('/fonts/playlist-script.woff') format('woff'),
+       url('/fonts/playlist-script.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Arapey';
+  src: url('/fonts/arapey-regular.eot');
+  src: url('/fonts/arapey-regular.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/arapey-regular.woff2') format('woff2'),
+       url('/fonts/arapey-regular.woff') format('woff'),
+       url('/fonts/arapey-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Container
+.container {
+  @extend .is-max-desktop;
+}
+
+// Buttons and Tags roundeds
+.button, .tag {
+  @extend .is-rounded;
+}
+
+// Reverse rows movile only
+@media(max-width: 768px) {
+  .reverse-rows-mobile-only {
+    flex-direction: row-reverse;
+  }
+}
+
+// Modal card max width
+.modal-content, .modal-card {
+  margin: 0 20px;
+  max-height: calc(100vh - 40px);
+  max-width: calc(100vw - 40px);
+}
+.modal-close {
+  background-color: rgba(29, 59, 47, 0.2);
+  border-radius: 50%;
+}
+
+// Headers and titles
+h1, h2, h3, h4, h5, h6, .title {
+  font-family: $family-secondary;
+  font-weight: normal !important;
+}
+.subtitle {
+  font-family: $family-monospace;
+  font-weight: normal !important;
+}
+.title {
+  color: $content-heading-color
+}
+
+// Menú
+.navbar {
+  transition: all .5s, font-size 0s;
+  .navbar-end {
+    transition: width .5s;
+    justify-content: space-between;
+  }
+  .navbar-end {
+    width: 100%;
+  }
+  .navbar-brand .navbar-item {
+    white-space: nowrap;
+    margin-bottom: -.25rem;
+  }
+  @media screen and (min-width: 1024px){
+    .navbar-brand .navbar-item {
+      width: 30rem;
+    }
+  }
+  &.is-transparent {
+    background-color: transparent;
+    .navbar-brand .navbar-item {
+      opacity: 0;
+      width: 0;
+      padding: 0;
+    }
+  }
+  .navbar-burger {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  .navbar-item {
+    transition: all .5s;
+  }
+  @media screen and (max-width: 1023px) {
+    .navbar-menu {
+      display: block;
+      height: 0vh;
+      padding: 0;
+      opacity: 0;
+      transition: all .5s;
+    }
+    .navbar-menu.is-active {
+      height: 100vh;
+      padding: 0.5rem 0;
+      opacity: 1;
+    }
+  }
+}
+@media screen and (min-width: 1024px){
+  .py-4-desktop {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+}
+
+// Header
+header.hero {
+  background-image: url(/img/fondo.jpg);
+  background-size: cover;
+  background-blend-mode: screen;
+}
+
+// Backdrop
+.hero-body {
+  backdrop-filter: blur(.5rem);
+}
+
+// Correct address
+address {
+  font-style: normal;
+}

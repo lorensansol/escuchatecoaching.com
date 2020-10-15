@@ -1,0 +1,83 @@
+meta(charset='utf-8')
+meta(name='viewport' content='width=device-width, initial-scale=1.0')
+block metas
+  if title
+    title= title
+    meta(name='twitter:title' property='og:title' content=title)
+  else
+    title= 'Escuchate Coaching Ontológico'
+  if metaDescription
+    meta(name='description twitter:description' property='og:description' content=metaDescription)
+  if noindex
+    meta(name='robots' content='noindex')
+meta(property='og:site_name' content='Escuchate Coaching Ontológico')
+meta(property='og:url' content=`http://escuchatecoaching.com/${url || ''}`)
+meta(property='og:type' content='website')
+meta(property='og:locale' content='es_ES')
+meta(name='twitter:card' content='summary_large_image')
+meta(name='twitter:image' property='og:image' content=`https://escuchatecoaching.com/${img || 'img/logo.png'}`)
+if url || index
+  link(rel='canonical' href=`https://escuchatecoaching.com/${url || ''}`)
+link(rel='shortcut icon' type='image/x-icon' sizes='16x16' href='favicon.ico')
+
+link(rel='icon' type='image/png' sizes='32x32' href='img/favicon/favicon.png')
+
+link(rel='stylesheet' href='css/styles.css' type='text/css' media='print' onload="this.media='all'")
+meta(name='google-site-verification' content='9lvO4nmdJlYuvQnlw2zYQdtQwywFWusaxzHRuHCW6s8')
+script(async src='https://www.googletagmanager.com/gtag/js?id=UA-2157126-24')
+script.
+  window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-2157126-24');
+script(type='application/ld+json').
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "logo": "https://escuchatecoaching.com/img/logo.png",
+    "brand": {
+      "@type": "Brand",
+      "name": "Escuchate Coaching Ontológico"},
+    "name": "Escuchate Coaching Ontológico",
+    "alternateName": [
+      "Escuchate Coaching"],
+    "description": "Sesiones y Talleres de Coaching Ontológico Presenciales y Online",
+    "url": "http://escuchatecoaching.com/",
+    "sameAs": [
+      "https://www.instagram.com/escuchate_coaching/",
+      "https://www.facebook.com/escuchatecoaching"],
+    "telephone": [
+      "+5492984330078",
+      "29 84 33 00 78"],
+    "email": "&#x66;&#x6C;&#x6F;&#x72;&#x65;&#x6E;&#x63;&#x69;&#x61;&#x64;&#x65;&#x73;&#x69;&#x6C;&#x6C;&#x65;&#x73;&#x40;&#x68;&#x6F;&#x74;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x63;&#x6F;&#x6D;",
+    "openingHours": [
+      "Mo-Fr 9:30-12:30",
+      "Mo-Fr 14:30-20:30"],
+    "hasMap": "https://goo.gl/maps/hy19EF6aGu4AMsNG8",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Plaza Beato Andrés Hibernón 1",
+      "postalCode": "30001",
+      "addressLocality": "Murcia",
+      "addressRegion": "Murcia",
+      "addressCountry": "ES"},
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.987117",
+      "longitude": "-1.127396"},
+    "image": [
+      "https://escuchatecoaching.com/img/fondo.jpg",
+      "https://escuchatecoaching.com/img/equipo-clinica-martinez-marcos.jpg",
+      "https://escuchatecoaching.com/img/juan-jose-martinez-marcos.jpg",
+      "https://escuchatecoaching.com/img/leticia-martinez-pino.jpg",
+      "https://escuchatecoaching.com/img/recibidor-central.jpg",
+      "https://escuchatecoaching.com/img/modesto-jesus-sanchez-lopez.jpg",
+      "https://escuchatecoaching.com/img/mios-rehab/equipo-mios-rehab.jpg",
+      "https://escuchatecoaching.com/img/mios-rehab/jose-a-lozano.jpg",
+      "https://escuchatecoaching.com/img/mios-rehab/miguel-garcia-albadalejo-miki.jpg",
+      "https://escuchatecoaching.com/img/mios-rehab/local-mios-rehab-2.jpg",
+      "https://escuchatecoaching.com/img/mios-rehab/local-mios-rehab.jpg"],
+    "priceRange": "$",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "13",
+      "reviewCount": "13"}
+  }
