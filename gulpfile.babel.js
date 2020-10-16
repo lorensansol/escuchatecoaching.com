@@ -1,5 +1,5 @@
 // Modo Desarrollo
-const devMode = true
+const devMode = false
 
 // Common
 import gulp from 'gulp'
@@ -38,7 +38,6 @@ gulp.task('html', () => {
 })
 
 const filesJs = [
-  'src/js/cookies-control.js',
   'src/js/scroll-behavior-smooth.js',
   'src/js/scroll-shot.js',
   'src/js/scroll-show.js',

@@ -13,7 +13,7 @@ scrollShot(
 		nodo.classList.add('lazyload');
 		var width = nodo.getAttribute('width') || '100%';
 		var height = nodo.getAttribute('height') || '100%';
-		nodo.setAttribute('src', `data:image/svg+xml,%3csvg%20width='${width}'%20height='${height}'%20viewBox='0%200%2016%2016'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20fill='none'%20stroke='gray'%20stroke-width='1'%20stroke-miterlimit='10'%20cx='8'%20cy='8'%20r='7.5'/%3e%3cpolyline%20fill='none'%20stroke='gray'%20stroke-width='1'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-miterlimit='10'%20points='8,3 8,8 10,10'/%3e%3c/svg%3e`);
+		nodo.setAttribute('src', "data:image/svg+xml,%3Csvg%20width='" + width + "'%20height='" + height + "'%20viewBox='0%200%2016%2016'%20xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3Epath%7Btransform-origin:center%7Dpath:nth-child%282%29%7Banimation:spin%202s%20linear%20infinite%7Dpath:nth-child%283%29%7Banimation:spin%20calc%282s%20%2A%2012%29%20linear%20infinite%7D%40keyframes%20spin%7Bto%7Btransform:rotate%28360deg%29%7D%7D%3C/style%3E%3Cg%20fill='none'%20stroke='gray'%20stroke-width='1'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-miterlimit='10'%3E%3Ccircle%20cx='8'%20cy='8'%20r='7.5'/%3E%3Cpath%20d='M8%203%20V8'/%3E%3Cpath%20d='M8%208%20L10%2010'/%3E%3C/g%3E%3C/svg%3E");
 	}
 );
 
@@ -22,5 +22,6 @@ scrollShot(
 	'0px',
 	'160px',
 	'[data-style]',
-	nodo => nodo.style = nodo.dataset.style
+	nodo => nodo.style = nodo.dataset.style,
+	// nodo => nodo.style = "background-image: url(data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3Epath%7Btransform-origin:center%7Dpath:nth-child%282%29%7Banimation:spin 2s linear infinite%7Dpath:nth-child%283%29%7Banimation:spin calc%282s %2A 12%29 linear infinite%7D%40keyframes spin%7Bto%7Btransform:rotate%28360deg%29%7D%7D%3C/style%3E%3Cg fill='none' stroke='gray' stroke-width='1' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10'%3E%3Ccircle cx='8' cy='8' r='7.5'/%3E%3Cpath d='M8 3 V8'/%3E%3Cpath d='M8 8 L10 10'/%3E%3C/g%3E%3C/svg%3E); background-repeat: no-repeat; background-position: center;";
 );

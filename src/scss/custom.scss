@@ -200,6 +200,24 @@ address {
     width: auto;
     max-width: 100%;
   }
+  #caracteriza + .columns .fa {
+    background-color: $link;
+    border-radius: 50%;
+    padding: 1.5rem;
+    width: 7rem;
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  hr {
+    height: .25rem;
+    margin: -1rem auto 1.5rem;
+    width: 6rem;
+    border-radius: 1rem;
+  }
 }
 
 // Reviews / Testimonios
