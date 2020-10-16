@@ -107,7 +107,7 @@ burger.addEventListener('click', toggleMenu)
 function closeMenu(){
   burger.classList.remove('is-active')
   burgerTarget.classList.remove('is-active')
-  navbar.classList.remove('is-transparent')
+  navbar.classList.add('is-transparent')
 }
 navbar.addEventListener('click', e => {
   if (e.target.tagName == 'A'
@@ -118,18 +118,21 @@ navbar.addEventListener('click', e => {
 })
 
 // Shot Top Scroll
-if(window.innerWidth >= 1024){
-  scrollShot(
-    '0px',
-    '0px',
-    '.shot-top-scroll',
-    () => navbar.classList.add('is-transparent', 'py-4-desktop', 'is-size-5'),
-    () => undefined,
-    () => navbar.classList.remove('is-transparent', 'py-4-desktop', 'is-size-5')
-  )
-// } else {
-//   navbar.classList.add('is-transparent', 'py-4-desktop', 'is-size-5')
-}
+setTimeout( () => {
+  if(window.innerWidth >= 1024){
+    console.log(window.innerWidth)
+    scrollShot(
+      '0px',
+      '0px',
+      '.shot-top-scroll',
+      () => navbar.classList.add('is-transparent', 'py-4-desktop', 'is-size-5'),
+      () => undefined,
+      () => navbar.classList.remove('is-transparent', 'py-4-desktop', 'is-size-5')
+    )
+  // } else {
+  //   navbar.classList.add('is-transparent', 'py-4-desktop', 'is-size-5')
+  }
+}, 100)
 
 // Navbar Scroll Spy
 scrollShot(

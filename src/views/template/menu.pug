@@ -11,9 +11,19 @@ nav.navbar.is-fixed-top.is-transparent(role='navigation' aria-label='main naviga
         span(aria-hidden='true')
     #navbar-menu.navbar-menu
       .navbar-end
-        a.navbar-item.is-tab(href='#servicios') Servicios
-        a.navbar-item.is-tab(href='#que') ¿Qué es?
-        a.navbar-item.is-tab(href='#sobre') Sobre mí
-        a.navbar-item.is-tab(href='#testimonios') Testimonios
+        a.navbar-item.is-tab(href='#servicios')
+          i.fas.fa-fw.fa-star.has-text-link.mr-1
+          |  Servicios
+        a.navbar-item.is-tab(href='#que')
+          i.fas.fa-fw.fa-info-circle.has-text-link.mr-1
+          |  ¿Qué es?
+        a.navbar-item.is-tab(href='#sobre')
+          i.fas.fa-fw.fa-user-circle.has-text-link.mr-1
+          |  Sobre mí
+        a.navbar-item.is-tab(href='#testimonios')
+          i.fas.fa-fw.fa-comments.has-text-link.mr-1
+          |  Testimonios
         .navbar-item.is-tab
-          a.button.is-info(href='#contacto') Contacto
+          a.button.is-info(href='#contacto')
+            i.fas.fa-fw.fa-phone-alt.has-text-link.mr-1
+            |  Contacto

@@ -1,5 +1,7 @@
 meta(charset='utf-8')
 meta(name='viewport' content='width=device-width, initial-scale=1.0')
+
+//- Title, Description and Robots
 block metas
   if title
     title= title
@@ -10,23 +12,37 @@ block metas
     meta(name='description twitter:description' property='og:description' content=metaDescription)
   if noindex
     meta(name='robots' content='noindex')
+
+//- Open Graph and Twitter Card
 meta(property='og:site_name' content='Escuchate Coaching Ontológico')
 meta(property='og:url' content=`http://escuchatecoaching.com/${url || ''}`)
 meta(property='og:type' content='website')
 meta(property='og:locale' content='es_ES')
 meta(name='twitter:card' content='summary_large_image')
 meta(name='twitter:image' property='og:image' content=`https://escuchatecoaching.com/${img || 'img/logo.png'}`)
+
+//- Canonical
 if url || index
   link(rel='canonical' href=`https://escuchatecoaching.com/${url || ''}`)
+
+//- Favicon
 link(rel='shortcut icon' type='image/x-icon' sizes='16x16' href='favicon.ico')
+link(rel='apple-touch-icon' sizes='180x180' href='img/favicon/apple-touch-icon.png')
+link(rel='icon' type='image/png' sizes='32x32' href='img/favicon/favicon-32x32.png')
+link(rel='icon' type='image/png' sizes='16x16' href='img/favicon/favicon-16x16.png')
+link(rel='icon' type='image/png' sizes='192x192' href='img/favicon/android-chrome-192x192.png')
+link(rel='icon' type='image/png' sizes='512x512' href='img/favicon/android-chrome-512x512.png')
 
-link(rel='icon' type='image/png' sizes='32x32' href='img/favicon/favicon.png')
-
+//- Styles
 link(rel='stylesheet' href='css/styles.css' type='text/css' media='print' onload="this.media='all'")
+
+//- Google
 meta(name='google-site-verification' content='9lvO4nmdJlYuvQnlw2zYQdtQwywFWusaxzHRuHCW6s8')
 script(async src='https://www.googletagmanager.com/gtag/js?id=UA-2157126-24')
 script.
   window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-2157126-24');
+
+//- Schema
 script(type='application/ld+json').
   {
     "@context": "https://schema.org",
@@ -50,34 +66,24 @@ script(type='application/ld+json').
     "openingHours": [
       "Mo-Fr 9:30-12:30",
       "Mo-Fr 14:30-20:30"],
-    "hasMap": "https://goo.gl/maps/hy19EF6aGu4AMsNG8",
+    "hasMap": "https://goo.gl/maps/QMzM9Pc2tVBSthTH9",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Plaza Beato Andrés Hibernón 1",
-      "postalCode": "30001",
-      "addressLocality": "Murcia",
-      "addressRegion": "Murcia",
-      "addressCountry": "ES"},
+      "postalCode": "8400",
+      "addressLocality": "San Carlos de Bariloche",
+      "addressRegion": "Río Negro",
+      "addressCountry": "Argentina"},
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "37.987117",
-      "longitude": "-1.127396"},
+      "latitude": "-41.133507",
+      "longitude": "-71.310209"},
     "image": [
       "https://escuchatecoaching.com/img/fondo.jpg",
-      "https://escuchatecoaching.com/img/equipo-clinica-martinez-marcos.jpg",
-      "https://escuchatecoaching.com/img/juan-jose-martinez-marcos.jpg",
-      "https://escuchatecoaching.com/img/leticia-martinez-pino.jpg",
-      "https://escuchatecoaching.com/img/recibidor-central.jpg",
-      "https://escuchatecoaching.com/img/modesto-jesus-sanchez-lopez.jpg",
-      "https://escuchatecoaching.com/img/mios-rehab/equipo-mios-rehab.jpg",
-      "https://escuchatecoaching.com/img/mios-rehab/jose-a-lozano.jpg",
-      "https://escuchatecoaching.com/img/mios-rehab/miguel-garcia-albadalejo-miki.jpg",
-      "https://escuchatecoaching.com/img/mios-rehab/local-mios-rehab-2.jpg",
-      "https://escuchatecoaching.com/img/mios-rehab/local-mios-rehab.jpg"],
+      "https://escuchatecoaching.com/img/florencia-desilles.jpg"],
     "priceRange": "$",
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5",
-      "ratingCount": "13",
-      "reviewCount": "13"}
+      "ratingCount": "3",
+      "reviewCount": "3"}
   }

@@ -44,6 +44,7 @@
   font-display: swap;
 }
 
+// Smooth scroll
 html {
   scroll-behavior: smooth;
 }
@@ -76,6 +77,26 @@ html {
   border-radius: 50%;
 }
 
+// Modal transition
+.modal {
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s linear, visibility .3s step-end;
+  .modal-content{
+    transform: translateY(50vh);
+    transition: transform .3s;
+  }
+  &.is-active {
+      visibility: visible;
+      opacity: 1;
+      transition: opacity .3s linear, visibility 0s step-start;
+      .modal-content{
+        transform: translateY(0);
+      }
+  }
+}
+
 // Headers and titles
 h1, h2, h3, h4, h5, h6, .title {
   font-family: $family-secondary;
@@ -105,7 +126,8 @@ h1, h2, h3, h4, h5, h6, .title {
   }
   @media screen and (min-width: 1024px){
     .navbar-brand .navbar-item {
-      width: 30rem;
+      width: 22rem;
+      overflow: hidden;
     }
   }
   &.is-transparent {
@@ -114,6 +136,9 @@ h1, h2, h3, h4, h5, h6, .title {
       opacity: 0;
       width: 0;
       padding: 0;
+      .subtitle {
+        width: 0;
+      }
     }
   }
   .navbar-burger {
@@ -153,10 +178,65 @@ header.hero {
 
 // Backdrop
 .hero-body {
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(.5rem);
   backdrop-filter: blur(.5rem);
 }
 
 // Correct address
 address {
   font-style: normal;
+}
+
+// Sobre mi
+#sobre {
+  @media screen and (min-width: 769px){
+    #flor,
+    #flor-espacio {
+      order: 2;
+    }
+  }
+  #flor img {
+    width: auto;
+    max-width: 100%;
+  }
+}
+
+// Reviews / Testimonios
+#testimonios {
+  .fa-quote-right {
+    align-self: flex-end;
+  }
+  blockquote {
+    position: relative;
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border: .75em transparent solid;
+      border-top-color: $white;
+      border-bottom: 0;
+      position: absolute;
+      bottom: -.6em;
+      left: 2.25em;
+    }
+    div {
+      width: 100%;
+    }
+  }
+  figcaption {
+    font-style: normal;
+  }
+}
+
+//Copntact/o
+#contacto {
+  .container.section {
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+  .button {
+    max-width: 100%;
+  }
 }
