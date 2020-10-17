@@ -94,7 +94,7 @@ gulp.task('critical', () => {
         base: 'docs/',
         inline: true,
         css: ['docs/css/styles.css'],
-        ignore: ['font-face'],
+        ignore: ['@font-face'],
       })
     )
     .pipe(gulp.dest('docs'))
