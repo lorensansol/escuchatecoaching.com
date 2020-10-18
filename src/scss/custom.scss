@@ -77,6 +77,14 @@ html {
   border-radius: 50%;
 }
 
+// Modal background
+// .modal-content .box {
+//   background-color: $light;
+//   background-image: url(/img/fondo-modal-top.svg), url(/img/fondo-modal-bottom.svg);
+//   background-repeat: no-repeat, no-repeat;
+//   background-position: top, bottom;
+// }
+
 // Modal transition
 .modal {
   display: flex;
@@ -265,7 +273,7 @@ address {
   }
 }
 
-//Copntact/o
+// Contact/o
 #contacto {
   .container.section {
     padding-left: .75rem;
@@ -274,4 +282,15 @@ address {
   .button {
     max-width: 100%;
   }
+}
+
+// Curve
+.curva {
+  margin-bottom: -.5rem;
+}
+.curva-servicios {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-bottom: -2px;
 }
