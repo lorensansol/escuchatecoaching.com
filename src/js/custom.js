@@ -1,6 +1,6 @@
 // Variables
-const burger = document.querySelector('.navbar-burger')
 const navbar = document.querySelector('.navbar')
+const burger = document.querySelector('.navbar-burger')
 const burgerTarget = document.getElementById(burger.dataset.target)
 const navbarItemsTab = document.querySelectorAll('.navbar-item.is-tab')
 const modalOpen = document.querySelectorAll('[aria-label="modal"][data-target]')
